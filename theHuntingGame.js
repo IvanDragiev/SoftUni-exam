@@ -1,9 +1,9 @@
 function theHuntingGame(input) {
-    let adventureDays = Number(input.shift())
-    let playersCount = Number(input.shift())
-    let groupEnergy = Number(input.shift())
-    let waterPerDay = Number(input.shift())
-    let foodPerDay = Number(input.shift())
+    let adventureDays = Number(input.shift());
+    let playersCount = Number(input.shift());
+    let groupEnergy = Number(input.shift());
+    let waterPerDay = Number(input.shift());
+    let foodPerDay = Number(input.shift());
     let totalWater = adventureDays * playersCount * waterPerDay;
     let totalFood = adventureDays * playersCount * foodPerDay;
     let energyLeft = groupEnergy;
@@ -11,7 +11,7 @@ function theHuntingGame(input) {
     let waterLeft = totalWater;
 
     for (let i = 1; i <= input.length; i++) {
-        let energyLoss = Number(input[i - 1])
+        let energyLoss = Number(input[i - 1]);
         energyLeft -= energyLoss;
         if (energyLeft <= 0) {
             break;

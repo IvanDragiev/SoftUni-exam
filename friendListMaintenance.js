@@ -1,6 +1,6 @@
 function friendListMaintenance(input) {
     let friendList = input.shift().split(", ");
-    let commands = input.slice()
+    let commands = input.slice();
     let currentLine = commands.shift();
     let blacklistCount = 0;
     let errorCount = 0;
@@ -27,7 +27,7 @@ function friendListMaintenance(input) {
                 for (let i = 0; i < friendList.length; i++) {
                     let currentName = friendList[i];
                     if (firstArgument === i && currentName !== "Blacklisted" && currentName !== "Lost") {
-                        friendList.splice(i, 1, "Lost")
+                        friendList.splice(i, 1, "Lost");
                         console.log(`${currentName} was lost due to an error.`);
                         errorCount++;
                     } 
@@ -38,7 +38,7 @@ function friendListMaintenance(input) {
                 for (let i = 0; i < friendList.length; i++) {
                     let currentName = friendList[i];
                     if (firstArgument === i ) {
-                        friendList.splice(firstArgument, 1, secondArgument)
+                        friendList.splice(firstArgument, 1, secondArgument);
                         console.log(`${currentName} changed his username to ${secondArgument}.`);
                     } 
                 }

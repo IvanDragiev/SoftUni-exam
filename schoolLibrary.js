@@ -1,6 +1,6 @@
 function schoolLibrary(input) {
     let shelfOfBooks = input.shift().split("&");
-    let commands = input.slice()
+    let commands = input.slice();
     let currentLine = commands.shift();
 
     while (currentLine != "Done") {
@@ -12,14 +12,14 @@ function schoolLibrary(input) {
         switch (command) {
             case "Add Book":
                 if (!shelfOfBooks.includes(firstArgument)) {
-                    shelfOfBooks.unshift(firstArgument)
+                    shelfOfBooks.unshift(firstArgument);
                 }
 
                 break;
             case "Take Book":
                 if (shelfOfBooks.includes(firstArgument)) {
                     let bookIndex = shelfOfBooks.indexOf(firstArgument);
-                    shelfOfBooks.splice(bookIndex, 1)
+                    shelfOfBooks.splice(bookIndex, 1);
                 }
                 break;
             case "Swap Books":
@@ -34,7 +34,7 @@ function schoolLibrary(input) {
                 break;
             case "Insert Book":
                 if (!shelfOfBooks.includes(firstArgument)) {
-                    shelfOfBooks.push(firstArgument)
+                    shelfOfBooks.push(firstArgument);
                 }
                 break;
             case "Check Book":
